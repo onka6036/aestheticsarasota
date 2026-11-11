@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aesthetic Center of Sarasota LLC - Specialized cosmetic and skin rejuvenation services in Sarasota, Florida.">
+<title>Aesthetic Center of Sarasota | Skin Rejuvenation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --gold: #b99a70;
+    --dark: #292722;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --muted: #77736b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0,0,0,.04);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.2;
+}
+
+.logo span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    background: var(--gold);
+    color: white !important;
+    padding: 12px 20px;
+}
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+    linear-gradient(90deg, rgba(25,23,20,.68), rgba(25,23,20,.12)),
+    url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=85') center/cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero small {
+    color: #e7c99e;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.hero p {
+    font-size: 15px;
+    max-width: 490px;
+    color: #f1eee9;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    padding: 15px 27px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #98774d;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 15px 0 20px;
+}
+
+.intro {
+    max-width: 720px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.about {
+    background: var(--cream);
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.service-card {
+    background: white;
+    padding-bottom: 30px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.service-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 20px 22px 8px;
+}
+
+.service-card p {
+    font-size: 13px;
+    color: var(--muted);
+    padding: 0 22px;
+}
+
+.why {
+    background: #fff;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 45px;
+}
+
+.why-item {
+    padding: 25px;
+}
+
+.why-item .symbol {
+    color: var(--gold);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.why-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.why-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact {
+    background: var(--cream);
+}
+
+.contact-box {
+    max-width: 750px;
+    margin: 35px auto 0;
+    background: white;
+    padding: 40px;
+}
+
+.contact-box p {
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.contact-box a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    color: var(--gold);
+}
+
+footer {
+    background: #292722;
+    color: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+footer p {
+    font-size: 11px;
+    color: #c5beb2;
+    margin-top: 12px;
+}
+
+.mobile-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    color: var(--dark);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,.08);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 65px 7%;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+    .services,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 25px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        AESTHETIC CENTER
+        <span>OF SARASOTA</span>
+    </div>
+
+    <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+
+    <nav id="navigation">
+        <a href="#home" onclick="closeMenu()">HOME</a>
+        <a href="#about" onclick="closeMenu()">ABOUT</a>
+        <a href="#services" onclick="closeMenu()">SERVICES</a>
+        <a href="#contact" class="nav-btn" onclick="closeMenu()">CONTACT US</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <small>BEAUTY • CONFIDENCE • REJUVENATION</small>
+
+        <h1>Discover Your Natural Beauty</h1>
+
+        <p>
+            Experience a personalized approach to cosmetic care
+            and skin rejuvenation at Aesthetic Center of Sarasota.
+            Explore a welcoming destination focused on beauty,
+            confidence and self-care.
+        </p>
+
+        <a href="#contact" class="btn">GET IN TOUCH</a>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <span class="section-label">WELCOME TO OUR CENTER</span>
+
+    <h2>About Our Practice</h2>
+
+    <p class="intro">
+        Aesthetic Center of Sarasota LLC is a specialized
+        facility dedicated to cosmetic care and skin
+        rejuvenation. We believe in supporting individual
+        beauty goals through a thoughtful and personalized
+        approach to aesthetic wellness.
+    </p>
+</section>
+
+<section class="section" id="services">
+    <span class="section-label">WHAT WE FOCUS ON</span>
+
+    <h2>Our Areas of Focus</h2>
+
+    <p class="intro">
+        Discover our aesthetic care specialties and explore
+        possibilities for your personal skincare journey.
+    </p>
+
+    <div class="services">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Professional facial skincare">
+            <h3>Skin Rejuvenation</h3>
+            <p>
+                Aesthetic-focused skincare and rejuvenation
+                designed around individual beauty goals.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80" alt="Skincare treatment">
+            <h3>Cosmetic Care</h3>
+            <p>
+                Explore cosmetic care options with an emphasis
+                on personal aesthetic preferences.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80" alt="Beauty and skincare products">
+            <h3>Personalized Skincare</h3>
+            <p>
+                A thoughtful approach to skincare and
+                individual aesthetic wellness goals.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section why">
+    <span class="section-label">OUR PHILOSOPHY</span>
+
+    <h2>Beauty Begins With Confidence</h2>
+
+    <div class="why-grid">
+
+        <div class="why-item">
+            <div class="symbol">✧</div>
+            <h3>Personal Attention</h3>
+            <p>
+                Every individual's aesthetic goals and
+                preferences deserve thoughtful attention.
+            </p>
+        </div>
+
+        <div class="why-item">
+            <div class="symbol">◇</div>
+            <h3>Aesthetic Focus</h3>
+            <p>
+                A dedicated environment centered on
+                cosmetic care and skin rejuvenation.
+            </p>
+        </div>
+
+        <div class="why-item">
+            <div class="symbol">♡</div>
+            <h3>Confidence & Care</h3>
+            <p>
+                Supporting your personal beauty journey
+                with a welcoming approach.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <span class="section-label">WE WOULD LOVE TO HEAR FROM YOU</span>
+
+    <h2>Contact Our Center</h2>
+
+    <p class="intro">
+        Have questions or wish to learn more about our
+        aesthetic services? Contact our center today.
+    </p>
+
+    <div class="contact-box">
+        <p><strong>Business Name</strong><br>
+        AESTHETIC CENTER OF SARASOTA LLC</p>
+
+        <p><strong>Address</strong><br>
+        6118 S Tamiami Trail,<br>
+        Sarasota, FL 34231</p>
+
+        <p><strong>Telephone</strong><br>
+        <a href="tel:+19412831938">(941) 283-1938</a></p>
+
+        <p><strong>Email</strong><br>
+        <a href="mailto:info@aestheticsarasota.com">info@aestheticsarasota.com</a></p>
+
+        <br>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=6118+S+Tamiami+Trail+Sarasota+FL+34231"
+           target="_blank" rel="noopener" class="btn">
+           GET DIRECTIONS
+        </a>
+    </div>
+</section>
+
+<footer>
+    <h3>Aesthetic Center of Sarasota</h3>
+    <p>Cosmetic Care & Skin Rejuvenation</p>
+    <p>© <span id="year"></span> Aesthetic Center of Sarasota LLC. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navigation").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navigation").classList.remove("active");
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
